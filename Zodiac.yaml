@@ -1,0 +1,22 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: A starter AWS Lambda function.
+Resources:
+  Zodiac:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Handler: lambda_function.lambda_handler
+      Runtime: python3.7
+      CodeUri: .
+      Description: A starter AWS Lambda function.
+      MemorySize: 128
+      Timeout: 3
+      Role: 'arn:aws:iam::481708550652:role/service-role/MathTutorial-role-6yc2nx4j'
+      Events:
+        Api1:
+          Type: Api
+          Properties:
+            Path: /Zodiac
+            Method: ANY
+      Tags:
+        'lambda-console:blueprint': hello-world-python
