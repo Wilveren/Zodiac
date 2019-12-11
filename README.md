@@ -1,5 +1,5 @@
 # Zodiac
-Function written in Python 3.7 which determines a user's western zodiak sign, given thir birth month and day. Originally written for use
+Function written in Python 3.7 which determines a user's western zodiac sign, given thir birth month and day. Originally written for use
 as an AWS Lambda function, and was built in the Lambda code editor.
 
 Data validation and sanitization are included, so function is fully modular and ready to be used by larger applications.
