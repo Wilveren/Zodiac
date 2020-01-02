@@ -9,7 +9,7 @@ print('Loading function')
 
 def lambda_handler(event, context):
     month=event['month'] #Line for month input
-    day=event['day'] #Line for day input
+    day=int(event['day']) #Line for day input. Receives as string, to typecasts to int
 	#Data sanitization. Convert all characters in month to lowercase, and remove any blank spaces.
     month = month.lower() 
     month = month.strip()
@@ -47,5 +47,5 @@ def lambda_handler(event, context):
     else:
         astro_sign = "None, because that's not a valid date." #Error message that is set if first if statement is not true.
     return{
-        "Your Zodiac Sign is ": astro_sign
+        "result" : "Your Zodiac sign is: "+ astro_sign
     }
